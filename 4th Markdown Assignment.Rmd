@@ -1,5 +1,5 @@
 ---
-title: "4th Markdown Assignment"
+title: "4th Markdown Group Assignment"
 author: "Joey Castillo, Justine Sison, Lester Salvador, Sun Phil Zablan"
 date: "8/5/2021"
 output: html_document
@@ -9,22 +9,28 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+### **Introduction**
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+In a study conducted by Quan-Hoang Vuong,  et al., forests play a vital role in people’s livelihoods, especially for poor people living in remote and upland areas. However, despite tremendous efforts by the Vietnamese government, further rural development is currently hindered by the existing livelihood and forestry policies, stemming from a limited understanding and/or the lack of scientific advice. The province of Nghe An not only experiences a high rate of deforestation and forest degradation, but also has great potential for afforestation or the process of introducing trees and tree seedlings to an area that has previously not been forested, and reforestation, which can contribute in emission reduction. In addition, living in a poor, mountainous commune, the indigenous people’s income largely depends on agricultural production and products from forests.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+Therefore, to have better understanding of rural livelihood associated with forest planting-related constraints, the researchers decided to conduct a survey in the commune of Chau Thai, located in the Nghe An province of Vietnam, in order to devise or/and suggest better sustainable rural development and climate change mitigation policies to the government. Households living within 4 villages of the commune were surveyed through a questionnaire. After collecting data and eliminating some incomplete answers, the data includes 215 observations with information on three aspects: resource structure and the local people’s livelihood strategies, factors hindering production forest planting, the difference between poor and non-poor households, and the personal information of the head of households. It is noted that households are further categorized into poor and non-poor according to Vietnam’s poverty line in rural areas between 2016 and 2020. This primary data could be useful for scholars who want to conduct a further in-depth study with regards to the rural livelihood and poverty rate in rural areas in Vietnam, and/or experts and policymakers to devise a better rural livelihood -improvement policies for farmers and those living in poverty, in the uplands of Vietnam. 
 
-```{r cars}
-summary(cars)
-```
+With data gathered and presented, it was determined that plantation forest and livestock are major sources of farmers’ income while forestland accounts for over 90% of households’ land, and there is also a disparity in livelihood in areas such as forestland, labor and income between the poor and non-poor households. However, we decided to focus on the relationship between land area and income. We would like to create and present a regression line or a regression graph to determine their relationship. 
 
-## Including Plots
+### **Methodology**
 
-You can also embed plots, for example:
+The Chau Thai commune was selected because of these reasons: it is one of 206 poor communes in Nghe An and it has a high potential for afforestation and other projects on climate change mitigation. On another note, the 4 villages selected were the following: Dong Minh, Ban Hat, Thai Quang, and Dong Hin. Data were collected using a field survey  consisting of 62 items. They were then converted to .xlsx format for formal analysis into an external application. People in the target area of study were randomly sampled to determine the survey's respondents. The researchers adopted three steps in designing their study.  First, they formed a focus group to help interviewers grasp the data collection procedure and enhance the questionnaire with the aid of the focus group members. Second, they ran a pilot survey with a view to making proper adjustment to the questionnaire until the final version came out. The third and final step is they conducted the survey using a random sampling technique and questionnaire-based face-to-face interviews from the final draft of the questionnaire. 
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+The first part of the questionnaire investigates a households’ land use structure. This part is composed of 9 questions. The second part, which is composed of 15 questions, looks into income structure. The third part is the people’s perceptions towards setbacks in production forest planting, which is composed of 23 questions, in order to obtain the different levels of plantation forest constraints. The last part, which is composed of 15 questions, aims to collect the respondents’ personal information and socioeconomic background.
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+In order to analyze the relationship between land area and income, we would use a regression line with the data coming from the data set. We would formulate the regression line, and determine the error in coefficients using an external application. 
+
+### ***Bibliography***
+
+Data journal used: 
+
+(insert journal source)
+
+Data set used
+
+(Insert data set source)
