@@ -29,7 +29,7 @@ In order to analyze the relationship between land area and income, we would use 
 
 Data journal used: 
 
-(insert journal source)
+Q.-H. Vuong, P. Pham, M.-H. Nguyen, C.-T. Ngo, P.-M. Tran, and Q. V. Khuc, “Farmers’ livelihood strategies and perceived constraints from poor and NON-POOR households: A dataset from a field survey in nghe An, Vietnam,” Data in Brief, vol. 36, p. 106991, Jun. 2021. 
 
 Data set used
 
