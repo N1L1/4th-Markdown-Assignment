@@ -1,14 +1,37 @@
 ---
-title: "4th Markdown Group Assignment"
+title: "4th Markdown Assignment"
 author: "Joey Castillo, Justine Sison, Lester Salvador, Sun Phil Zablan"
-date: "8/5/2021"
+date: "August 6, 2021"
 output: html_document
 ---
+<style type="text/css">
+  body{
+  font-family: Georgia;
+  font-size: 13pt;
+  text-align: justify;
+  background-color: #FDF5E6;
+}
+<!--
+ .tab { margin-left: 40px; color:DarkSlateGray;font-size: 14pt; }
+-->
+<!--
+ .tab-body { margin-left: 40px;}
+-->
+</style>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
+<hr>
+<center>
+
+## **Farmers’ livelihood strategies and perceived constraints from poor and non-poor households: A dataset from a field survey in Nghe An, Vietnam**
+Quan-Hoang Vuong, PhuPham, My-Hien Nguyen, Cong-Thang Ngo,Phuong-MaiTran, Quy VanKhuc
+
+</center>
+<hr>
 ### **Introduction**
 
 In a study conducted by Quan-Hoang Vuong,  et al., forests play a vital role in people’s livelihoods, especially for poor people living in remote and upland areas. However, despite tremendous efforts by the Vietnamese government, further rural development is currently hindered by the existing livelihood and forestry policies, stemming from a limited understanding and/or the lack of scientific advice. The province of Nghe An not only experiences a high rate of deforestation and forest degradation, but also has great potential for afforestation or the process of introducing trees and tree seedlings to an area that has previously not been forested, and reforestation, which can contribute in emission reduction. In addition, living in a poor, mountainous commune, the indigenous people’s income largely depends on agricultural production and products from forests.
@@ -17,6 +40,11 @@ Therefore, to have better understanding of rural livelihood associated with fore
 
 With data gathered and presented, it was determined that plantation forest and livestock are major sources of farmers’ income while forestland accounts for over 90% of households’ land, and there is also a disparity in livelihood in areas such as forestland, labor and income between the poor and non-poor households. However, we decided to focus on the relationship between land area and income. We would like to create and present a regression line or a regression graph to determine their relationship. 
 
+<center>
+![Farming Industry in Vietnam](http://hoinhap.org.vn/en/images/uyen-hinh/0_agriculture.jpg)
+
+</center>
+<hr>
 ### **Methodology**
 
 The Chau Thai commune was selected because of these reasons: it is one of 206 poor communes in Nghe An and it has a high potential for afforestation and other projects on climate change mitigation. On another note, the 4 villages selected were the following: Dong Minh, Ban Hat, Thai Quang, and Dong Hin. Data were collected using a field survey  consisting of 62 items. They were then converted to .xlsx format for formal analysis into an external application. People in the target area of study were randomly sampled to determine the survey's respondents. The researchers adopted three steps in designing their study.  First, they formed a focus group to help interviewers grasp the data collection procedure and enhance the questionnaire with the aid of the focus group members. Second, they ran a pilot survey with a view to making proper adjustment to the questionnaire until the final version came out. The third and final step is they conducted the survey using a random sampling technique and questionnaire-based face-to-face interviews from the final draft of the questionnaire. 
@@ -25,12 +53,110 @@ The first part of the questionnaire investigates a households’ land use struct
 
 In order to analyze the relationship between land area and income, we would use a regression line with the data coming from the data set. We would formulate the regression line, and determine the error in coefficients using an external application. 
 
-### ***Bibliography***
+<hr>
 
-Data journal used: 
+### **Results**
 
-Q.-H. Vuong, P. Pham, M.-H. Nguyen, C.-T. Ngo, P.-M. Tran, and Q. V. Khuc, “Farmers’ livelihood strategies and perceived constraints from poor and NON-POOR households: A dataset from a field survey in nghe An, Vietnam,” Data in Brief, vol. 36, p. 106991, Jun. 2021. 
+From the data set, the relationship between the land area and income will be analyzed with the use of a regression line. The values from the data set are given as follows: </p>
 
-Data set used
+<center>
+```{r, echo =  FALSE, message=FALSE, warning=FALSE}
+df <- data.frame(
+  x = c(2.04,2.02, 0.79,4.88, 2.81,8.38, 4.10, 3.20, 1.38, 3.06,8.36,2.16,2.71,0.97,1.22,0.83,1.11,0.14,0.89,2.12,0.89,5.52,12.10,2.09,1.94,5.35,4.59,1.10,0.60,6.16,3.12,2.35,0.83,12.09,2.17,2.81,2.38,0.11,3.06,8.27,2.12,6.76,0.68,6.50,6.25,1.26,5.07,1.93,3.34,1.54,4.66,3.12,1.92,12.45,6.24,3.46,3.89,0.70,0.11,3.02,10.20,6.11,11.47,6.53,9.92,2.34,3.62,4.04,12.23,0.83,1.06,1.82,0.82,1.96,0.86,1.65,1.81,1.72,1.63,1.75,1.43,2.39,5.59,2.07,9.12,12.32,6.20,2.13,1.95,1.06,1.10,0.91,2.84,1.77,0.88,2.52,1.24,3.07,1.43,1.80,0.74,1.10,6.87,1.60,4.55,2.11,2.31,10.13,1.06,3.40,4.94,2.76,3.44,10.86,3.27,1.19,0.21,0.90,0.37,0.23,0.37,1.05,0.25,0.19,0.24,2.23,1.06,2.22,1.56,3.30,2.07,4.12,6.11,1.13,7.28,10.97,6.90,3.99,2.26,2.11,0.36,0.83,1.88,1.05,0.67,1.05,2.16,1.09,1.31,2.14,1.58,1.08,4.04,3.07,1.95,1.80,1.40,3.51,6.15,1.24,1.08,1.54,0.84,0.87,1.51,0.41,1.11,1.49,1.04,3.08,7.65,4.77,1.92,3.06,5.50,6.53,5.06,3.04,2.24,2.22,1.82,5.06,7.69,1.46,3.17,0.88,0.88,2.08,1.20,2.14,3.75,2.09,4.56,8.59,6.29,2.93,7.10,7.72,1.28,0.99,2.07,1.85,5.58,4.05,0.68,1.65,1.07,2.52,1.97,0.69,0.88,1.23,6.16,1.07,0.36),
+  y = c(41.66,69.17,51.06,71.41,51.85,114.03,85.20,82.00,54.60,48.05,70.10,58.20,67.10,93.97,123.54,18.10,28.98,22.40,46.30,42.70,62.10,57.87,171.83,100.70,26.65,199.05,201.91,83.17,95.65,80.40,76.00,72.53,46.83,54.00,45.32,51.77,48.13,62.90,110.37,78.89,45.04,132.23,21.94,123.88,161.13,63.27,74.03,65.36,20.51,55.78,61.30,29.48,29.39,98.53,62.69,32.28,55.60,58.28,87.27,36.63,96.66,53.30,150.58,172.80,63.70,185.27,69.82,200.18,53.17,47.45,81.50,89.31,29.91,90.13,77.70,54.60,78.53,80.37,17.54,74.58,17.75,41.45,63.37,54.27,75.19,132.40,48.39,66.92,116.33,78.70,151.91,48.97,63.79,89.09,60.66,94.89,45.89,37.09,37.17,96.87,58.19,116.53,52.58,123.14,60.34,33.90,48.69,103.10,84.30,44.20,46.75,58.00,41.30,191.91,70.17,54.31,30.79,13.34,71.90,74.80,42.25,69.25,53.56,14.76,65.48,94.43,57.05,79.00,26.57,133.70,58.16,54.00,49.00,32.88,106.93,76.89,86.09,53.30,25.24,53.42,46.61,46.18,47.77,8.63,43.25,36.07,28.90,92.19,35.60,50.00,54.80,9.80,19.20,79.80,62.50,32.47,36.60,61.25,78.20,36.60,14.60,30.80,12.54,34.97,23.00,39.20,38.50,14.40,29.60,115.09,197.26,84.33,83.28,79.00,106.80,63.27,87.38,89.29,183.95,66.44,212.84,74.02,89.36,72.79,84.71,69.03,52.78,63.18,25.69,107.60,44.45,55.40,67.18,68.60,22.80,73.39,62.80,117.40,34.17,38.49,46.85,61.73,145.22,64.95,15.92,36.20,50.47,49.51,61.90,66.12,51.98,30.45,50.65,42.70,30.02))
+knitr::kable(df, "pipe", col.name=c("Total Land" , "Total Income (milliom)"), align=c("c","c","c"))
+```
+**Table 1.** Total Land and Total Income (million). </p>
+</center>
 
-(Insert data set source)
+The next diagram will show the scatter plot of total income in million versus the total land of the sampled households from the survey in Nghe An, Vietnam. </p>
+
+<center>
+```{r, echo = FALSE, message=FALSE}
+x <- df$x
+y <- df$y
+plot(x, y, main = "Total Income versus Total Land",
+     xlab = "Total Land", ylab = "Total Income",
+     pch = 19)
+abline(lm(y ~ x, data = df), col = "blue") 
+```
+</p>
+**Graph 1.** Scatter plot of *Total Land* versus *Total Income (million)*. </p>
+</center>
+
+As we can see from the scatter plot above, a ***simple linear regression model is reasonable*** for this situation because there is a linear relationship present between the total land  and total income. This means that an increase in total land will also an increase in total income. </p>
+
+### ***Simple Linear Regression Model***
+
+We will be fitting the data using a simple linear regression model using the least squares method. From the table 1, we will fit it using $\hat{y}=\hat{\beta}_0 +\hat{\beta}_1x$, wherein $\hat{y}$ represents the total income, $x$ represents the total land, and $\hat{\beta}_0$ and $\hat{\beta}_1$ are the estimates for regression coefficients. </p>
+
+With the use of the r computation, we can then solve for the fitted simple linear regression model.</p>
+
+```{r}
+
+x = df$x
+y = df$y
+
+Sxy = sum((x - mean(x)) * (y - mean(y)))
+Sxx = sum((x - mean(x)) ^ 2)
+Syy = sum((y - mean(y)) ^ 2)
+c(Sxy, Sxx, Syy)
+
+```
+
+Then we can calculate for the $\hat{\beta}_0$ and $\hat{\beta}_1$.
+```{r}
+
+x = df$x
+y = df$y
+
+beta_1_hat = Sxy / Sxx
+beta_0_hat = mean(y) - beta_1_hat * mean(x)
+c(beta_0_hat, beta_1_hat)
+
+```
+Thus, the fitted simple linear regression model for the graph is $$\hat{y}=50.145292+5.746483x$$</p>
+
+**Estimating $\sigma^2$, variance** </p>
+We can estimate the variance using r. 
+
+```{r}
+
+y_hat = beta_0_hat + beta_1_hat * x
+e = y - y_hat
+n = length(e)
+s2_e = sum(e^2) / (n - 2)
+s2_e
+
+```
+The ***estimated variance***, $\sigma^2$ is 1347.816. </p>
+
+Regression coefficients are the estimates of an unknown population parameters and gives a description of the relationship between the predictor variable and the response. In a simple linear regression, the coefficients are the values that multiply the predictor values. Suppose that we have the regression equation from earlier, which is $\hat{y}=50.145292+5.746483x$, the $+ 5.746483x$ is the coefficient, $x$ is the predictor, and $+ 50.145292$ is the constant. Since the coefficient has a positive sign, it tells us that as the predictor variable increases, the response variable also increases. </p>
+
+To test this relationship, suppose that we want to know the total income if the total land one owns is 4.59, we will be substituting it to the linear regression model that we have computed. </p>
+
+The simple line regression model is:
+$$\hat{y}=50.145292+5.746483x$$
+Now, let's make a prediction on the total income is the total land one owns is 4.59. </p>
+$$
+\begin{aligned}
+ \hat{y}&=50.145292+5.746483x\\
+ \hat{y}&=50.145292+(5.746483)(4.59)\\
+ \hat{y}&=76.5216
+\end{aligned}
+$$
+So, the total income if one owns a total land of 4.59 is approximately 76.52 million. 
+<hr>
+### **Discussion**
+<hr>
+### **Conclusion**
+<hr>
+<hr>
+### ***Bibliography*** 
+
+**Data journal used:** </p>
+Q.-H. Vuong, P. Pham, M.-H. Nguyen, C.-T. Ngo, P.-M. Tran, and Q. V. Khuc, “Farmers’ livelihood strategies and perceived constraints from poor and non-poor households: A dataset from a field survey in Nghe An, Vietnam,” Data in Brief, vol. 36, p. 106991, Jun. 2021, doi: 10.1016/j.dib.2021.106991.</p>
+
+**Data set used:** </p>
+Q.-H. Vuong, P. Pham, M.-H. Nguyen, C.-T. Ngo, P.-M. Tran, and Q. V. Khuc, “Farmers’ livelihood strategies and perceived constraints from poor and non-poor households: A dataset from a field survey in Nghe An, Vietnam,” Data in Brief, vol. 36, p. 106991, Jun. 2021, doi: 10.1016/j.dib.2021.106991.</p>
+
