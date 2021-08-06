@@ -84,7 +84,7 @@ abline(lm(y ~ x, data = df), col = "blue")
 **Graph 1.** Scatter plot of *Total Land* versus *Total Income (million)*. </p>
 </center>
 
-As we can see from the scatter plot above, a ***simple linear regression model is reasonable*** for this situation because there is a linear relationship present between the total land  and total income. This means that an increase in total land will also an increase in total income. </p>
+As we can see from the scatter plot above, a ***simple linear regression model is reasonable*** for this situation because there is a linear relationship present between the total land  and total income. This means that an increase in total land will also result in an increase in total income. </p>
 
 ### ***Simple Linear Regression Model***
 
@@ -148,8 +148,21 @@ $$
 So, the total income if one owns a total land of 4.59 is approximately 76.52 million. 
 <hr>
 ### **Discussion**
+
+The new findings gathered by us researchers based on the data provided by Vuong et al. show us that a linear regression model fits the gathered data well, and is applicable for the prediction of total income given a sample of land. This simple regression model falls within the researchers initial expectations as the dataset values seem to correlate with each other linearly. More land available to farmers means more space for agriculture, storage space, and livestock, which we think plays a major role in the linear relationship between land and income.
+
+This data may be primarily of use to the "Ministry of Agriculture and Rural Development" primarily located in Vietnam. The allocation of arable farmland around the mountainous terrain the data was derived from can benefit from the use of the model derived by us researchers.
+
+
+
 <hr>
 ### **Conclusion**
+With this new data gathered by the researchers, we conclude that the land area has a linear relationship with total income that can be represented with a linear regression model. The researchers made use of Rstudio tools such as Rmath and ggplots. After finding the model, the sign of its coefficient, and the variance, we made use of a test variable (4.59) and found a plausible prediction based on the linear regression model. 
+
+This data will be useful to anyone aiming for a deeper study into the relationship of land and income in the Nghe An province specifically. Vietnamese government agencies, independent researchers, and agriculture entrepreneurs based in Vietnam may use these new findings alongside the original research.
+
+
+
 <hr>
 <hr>
 ### ***Bibliography*** 
